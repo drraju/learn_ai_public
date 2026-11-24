@@ -1,0 +1,3 @@
+# Generation choices
+
+The application validates output after an adapter returns. `fixture` (P1 default) costs no API usage and is deterministic. `openai` uses the optional Python SDK Responses API; `ollama` uses the local `/api/chat` endpoint. Neither live path was executed during the default offline suite. Set `ALLOW_LIVE_MODEL=1` and a provider-specific model variable only after installing or running the provider; use synthetic inputs. Mocked tests do not establish model compatibility. [OpenAI text guide](https://developers.openai.com/api/docs/guides/text), [Ollama chat API](https://docs.ollama.com/api/chat), reviewed 25 November 2026.

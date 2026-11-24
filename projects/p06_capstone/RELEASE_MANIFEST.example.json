@@ -1,0 +1,9 @@
+{
+  "artifact": "local teaching reference",
+  "version": "0.0.0-draft",
+  "date": "2026-11-25",
+  "python": "3.11+ target; macOS 3.13 local check",
+  "fixtures": "synthetic",
+  "roll_back": "stop local process and restore reviewed revision",
+  "production_ready": false
+}

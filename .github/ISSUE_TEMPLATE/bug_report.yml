@@ -1,0 +1,15 @@
+name: Bug report
+description: Report a reproducible course or code defect
+body:
+  - type: textarea
+    id: issue
+    attributes:
+      label: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction command, OS, Python and provider versions
+    validations:
+      required: true

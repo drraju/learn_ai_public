@@ -1,0 +1,13 @@
+{
+  "provider": "mcp-python",
+  "capability": "read-only lookup",
+  "status": "in_process_verified",
+  "sdk_version": "2.3.0",
+  "model_or_runtime_version": null,
+  "tested_environment": "Python 3.12.12, macOS",
+  "last_verified": "2026-11-25",
+  "official_docs": "https://py.sdk.modelcontextprotocol.io/get-started/testing/",
+  "cost": "zero API usage",
+  "limitations": "See README; not a production authentication boundary",
+  "maintainer": "maintainer pending release"
+}

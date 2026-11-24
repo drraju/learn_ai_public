@@ -1,0 +1,13 @@
+{
+  "id": "M01",
+  "title": "AI and LLM foundations",
+  "status": "draft",
+  "prerequisites": [
+    "M00"
+  ],
+  "estimated_hours": 10,
+  "offline_path": true,
+  "project": "p01_llm_app",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "tenant": "demo",
+    "question": "login timeout",
+    "expected": "answered",
+    "citation": "RB-LOGIN"
+  },
+  {
+    "tenant": "demo",
+    "question": "no matching procedure",
+    "expected": "no_evidence",
+    "citation": null
+  },
+  {
+    "tenant": "other",
+    "question": "login timeout",
+    "expected": "no_evidence",
+    "citation": null
+  }
+]

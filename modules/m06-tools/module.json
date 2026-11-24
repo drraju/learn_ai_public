@@ -1,0 +1,14 @@
+{
+  "id": "M06",
+  "title": "Tool calling and bounded agents",
+  "status": "draft",
+  "prerequisites": [
+    "M02",
+    "M05"
+  ],
+  "estimated_hours": 18,
+  "offline_path": true,
+  "project": "p03_tool_agent",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}

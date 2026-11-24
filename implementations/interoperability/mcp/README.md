@@ -1,0 +1,3 @@
+# MCP implementation record
+
+P4 uses the optional MCP Python SDK v2 `MCPServer` and in-memory `Client`. The protocol reference is [MCP 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28). The [SDK first steps](https://py.sdk.modelcontextprotocol.io/get-started/first-steps/) and [testing guide](https://py.sdk.modelcontextprotocol.io/get-started/testing/) were reviewed 25 November 2026. The host allowlist precedes the client call. No remote transport, real identity or model invocation is included. SDK 2.3.0 in-process exchange passed on macOS Python 3.12.12 on 25 November 2026. This does not establish remote transport or host compatibility. Re-run `python -m unittest tests.test_mcp -v` in an environment with `mcp>=2,<3` before claiming compatibility.

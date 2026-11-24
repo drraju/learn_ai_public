@@ -1,0 +1,13 @@
+{
+  "id": "M07",
+  "title": "State, memory and human control",
+  "status": "draft",
+  "prerequisites": [
+    "M06"
+  ],
+  "estimated_hours": 14,
+  "offline_path": true,
+  "project": "p03_tool_agent",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}

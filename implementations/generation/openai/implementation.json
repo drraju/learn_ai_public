@@ -1,0 +1,13 @@
+{
+  "provider": "openai",
+  "capability": "text generation",
+  "status": "mocked_only",
+  "sdk_version": null,
+  "model_or_runtime_version": null,
+  "tested_environment": "Python 3.13.14, macOS mocked",
+  "last_verified": "2026-11-25",
+  "official_docs": "https://developers.openai.com/api/docs/guides/text",
+  "cost": "zero offline; external usage varies",
+  "limitations": "No live model compatibility verified",
+  "maintainer": "maintainer pending release"
+}

@@ -1,0 +1,14 @@
+{
+  "id": "M08",
+  "title": "MCP and external integration",
+  "status": "draft",
+  "prerequisites": [
+    "M06",
+    "M07"
+  ],
+  "estimated_hours": 12,
+  "offline_path": true,
+  "project": "p04_mcp",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}

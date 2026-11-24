@@ -1,0 +1,14 @@
+{
+  "id": "M05",
+  "title": "Retrieval and grounded answers",
+  "status": "draft",
+  "prerequisites": [
+    "M04",
+    "M01"
+  ],
+  "estimated_hours": 18,
+  "offline_path": true,
+  "project": "p02_rag",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}

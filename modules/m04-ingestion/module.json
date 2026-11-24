@@ -1,0 +1,14 @@
+{
+  "id": "M04",
+  "title": "Data ingestion and provenance",
+  "status": "draft",
+  "prerequisites": [
+    "M00",
+    "M02"
+  ],
+  "estimated_hours": 12,
+  "offline_path": true,
+  "project": "p02_rag",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}

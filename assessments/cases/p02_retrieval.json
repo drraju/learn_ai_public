@@ -1,0 +1,12 @@
+[
+  {
+    "tenant": "demo",
+    "question": "login timeout",
+    "expected": "RB-LOGIN"
+  },
+  {
+    "tenant": "demo",
+    "question": "alert A-17 latency",
+    "expected": "RB-ALERT"
+  }
+]

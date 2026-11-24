@@ -1,0 +1,13 @@
+{
+  "id": "M12",
+  "title": "Capstone and portfolio defense",
+  "status": "draft",
+  "prerequisites": [
+    "M11"
+  ],
+  "estimated_hours": 30,
+  "offline_path": true,
+  "project": "p06_capstone",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}

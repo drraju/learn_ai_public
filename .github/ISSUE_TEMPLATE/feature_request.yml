@@ -1,0 +1,9 @@
+name: Feature request
+description: Propose a bounded learner improvement
+body:
+  - type: textarea
+    id: value
+    attributes:
+      label: Learner problem, proposed change and acceptance check
+    validations:
+      required: true

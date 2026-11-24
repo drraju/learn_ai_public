@@ -1,0 +1,13 @@
+{
+  "provider": "fixture",
+  "capability": "deterministic generation",
+  "status": "offline_verified",
+  "sdk_version": null,
+  "model_or_runtime_version": null,
+  "tested_environment": "Python 3.13.14, macOS",
+  "last_verified": "2026-11-25",
+  "official_docs": "https://docs.python.org/3/",
+  "cost": "zero API usage",
+  "limitations": "See README; not a production authentication boundary",
+  "maintainer": "maintainer pending release"
+}

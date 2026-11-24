@@ -1,0 +1,20 @@
+[
+  {
+    "id": "RB-LOGIN",
+    "tenant": "demo",
+    "version": 1,
+    "text": "For login timeout, inspect gateway health and request logs. Do not restart without approval."
+  },
+  {
+    "id": "RB-SEARCH",
+    "tenant": "other",
+    "version": 1,
+    "text": "For slow search, inspect query latency and index freshness."
+  },
+  {
+    "id": "RB-ALERT",
+    "tenant": "demo",
+    "version": 1,
+    "text": "Alert A-17 indicates gateway latency. Confirm with metrics before action."
+  }
+]

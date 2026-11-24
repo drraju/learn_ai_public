@@ -1,0 +1,9 @@
+name: Provider implementation
+description: Propose an optional provider path
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Capability, exact version, official docs, cost and limitations
+    validations:
+      required: true

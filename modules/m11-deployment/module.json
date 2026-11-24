@@ -1,0 +1,13 @@
+{
+  "id": "M11",
+  "title": "Deployment, reliability and governance",
+  "status": "draft",
+  "prerequisites": [
+    "M10"
+  ],
+  "estimated_hours": 20,
+  "offline_path": true,
+  "project": "p06_capstone",
+  "last_verified": null,
+  "maintainer": "maintainer pending release"
+}
