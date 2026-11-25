@@ -4,6 +4,10 @@ The repository is published as an unfinished draft and has no tagged release or 
 
 ## Unreleased — 25 November 2026
 
+- Verified hosted Ubuntu, macOS and Windows CI on Python 3.11/3.13 for the prior draft; added P1/P2/P5 evaluation commands to the workflow for the next run.
+- Added P1 ten-case quality checks and a conservative causal-claim guard; P2 optional generated RAG with scoped citations and evidence quotes; P3 SQLite approval/effect ledger and proposal boundary; P4 version denial; P5 matched cost/latency comparison; P6 local request ledger, protected metrics and retention drill.
+- Recorded local model successes and failures, and opened an explicit rights inventory without assigning a licence.
+
 - Added a learner study sequence, module-specific demonstrations, and explicit project entry and exit checkpoints; kept MCP runtime work optional before orchestration.
 
 - Published the owner-authorized unfinished draft while keeping Stage 5 and Stage 6 release gates open.

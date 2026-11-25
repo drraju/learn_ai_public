@@ -33,6 +33,8 @@ Python 3.11+ and standard library provide the offline baseline. Fixture baseline
 
 For a live optional path, install the chosen provider separately, set `LEARN_AI_PROVIDER` to `openai` or `ollama`, set `ALLOW_LIVE_MODEL=1`, and set `OPENAI_MODEL` or `OLLAMA_MODEL`. Use only the synthetic fixture. The OpenAI path also needs the provider SDK and API credentials in the process environment; the Ollama path needs a running local service and model. Live results are unverified and may fail validation.
 
+Run `python -m projects.p01_llm_app.evaluate` from the root for ten labelled synthetic cases. The fixture baseline passes 10/10 automatic checks. The report marks nonliteral generated summaries for human support review; a source ID or valid JSON does not prove a claim is true. See the [local model verification](../../LIVE_VERIFICATION.md) for observed failures.
+
 ## Testing and evaluation
 
 Malformed issue, wrong source, empty uncertainty and live opt-in denial. Use [project rubric](../../assessments/rubrics/project_rubric.md). Report numerators and denominators for measured metrics. The reference tests check selected invariants; they do not establish model quality or learner competence.

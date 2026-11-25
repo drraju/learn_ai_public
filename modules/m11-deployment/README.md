@@ -28,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-Run `python -m projects.p06_capstone.evaluate` from the root, then follow the [P6 runbook](../../projects/p06_capstone/RUNBOOK.md) in two terminals for the local service. Its demo token is not production identity. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
+Run `python -m projects.p06_capstone.evaluate` from the root, then follow the [P6 runbook](../../projects/p06_capstone/RUNBOOK.md) in two terminals for the local service. Inspect authenticated metrics and the retention purge in the runbook. Its demo token is not production identity. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

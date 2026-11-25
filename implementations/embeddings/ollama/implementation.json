@@ -1,13 +1,13 @@
 {
   "provider": "ollama",
   "capability": "embeddings",
-  "status": "mocked_only",
+  "status": "live_attempt_unsupported_model",
   "sdk_version": null,
-  "model_or_runtime_version": null,
-  "tested_environment": "Python 3.13.14, macOS mocked",
+  "model_or_runtime_version": "Ollama 0.40.18; llama3.2:latest a80c4f17acd5",
+  "tested_environment": "macOS ARM64, Python 3.13.14, 48 GiB memory",
   "last_verified": "2026-11-25",
   "official_docs": "https://docs.ollama.com/api/embed",
   "cost": "zero offline; external usage varies",
-  "limitations": "No live model compatibility verified",
+  "limitations": "/api/embed returned HTTP 501 for the installed generation model. No separate embedding model was installed or tested; mocked contract only.",
   "maintainer": "maintainer pending release"
 }

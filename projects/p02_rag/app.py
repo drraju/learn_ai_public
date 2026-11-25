@@ -1,5 +1,6 @@
 """P2: versioned lexical retrieval with exact citation IDs and abstention."""
 import re
+import json
 from shared.core import Passage, load
 
 def tokens(text):
@@ -31,6 +32,41 @@ def answer(store,tenant,question):
     hits=store.search(tenant,question)
     if not hits: return {'answer':'I do not have supporting evidence.','citations':[],'abstained':True}
     return {'answer':hits[0].text,'citations':[hits[0].id],'abstained':False}
+
+def answer_with_generator(store, tenant, question, generator):
+    """Generate from authorized passages and require a verifiable evidence quote.
+
+    The quote and citation checks cannot establish support for every claim in the answer.
+    Human review is still needed for paraphrases and implied claims.
+    """
+    hits = store.search(tenant, question)
+    if not hits:
+        return {'answer': 'I do not have supporting evidence.', 'citations': [],
+                'abstained': True}
+    result = generator.generate_answer(question, hits)
+    if isinstance(result, str):
+        result = json.loads(result)
+    if not isinstance(result, dict):
+        raise ValueError('invalid generated answer')
+    if result.get('abstained') is True:
+        if result.get('citations') != []:
+            raise ValueError('abstention with citations')
+        return {'answer': 'I do not have supporting evidence.', 'citations': [],
+                'abstained': True}
+    if result.get('abstained') is not False:
+        raise ValueError('invalid generated answer')
+    text = result.get('answer')
+    citations = result.get('citations')
+    quote = result.get('evidence_quote')
+    if not isinstance(text, str) or not text.strip() or len(text) > 1000:
+        raise ValueError('invalid generated answer')
+    if not isinstance(citations, list) or len(citations) != 1 or not isinstance(citations[0], str):
+        raise ValueError('invalid citations')
+    cited = next((doc for doc in hits if doc.id == citations[0]), None)
+    if cited is None or not isinstance(quote, str) or len(quote) < 8 or quote not in cited.text:
+        raise ValueError('unsupported evidence quote')
+    return {'answer': text, 'citations': citations, 'abstained': False,
+            'evidence_quote': quote, 'support_review': 'human review required'}
 
 def recall_at_k(store,cases,k=2):
     if not cases: raise ValueError('cases required')

@@ -1,0 +1,92 @@
+[
+  {
+    "issue": {
+      "id": "INC-201",
+      "tenant": "demo",
+      "title": "Login timeout",
+      "description": "Login requests time out after a gateway restart. The cause is unknown."
+    },
+    "required_term": "login"
+  },
+  {
+    "issue": {
+      "id": "INC-202",
+      "tenant": "demo",
+      "title": "Alert delay",
+      "description": "Alert A-17 arrives late after a synthetic queue pause. No cause has been confirmed."
+    },
+    "required_term": "alert"
+  },
+  {
+    "issue": {
+      "id": "INC-203",
+      "tenant": "demo",
+      "title": "Search errors",
+      "description": "Search returns errors for two invented queries. The cause is under investigation."
+    },
+    "required_term": "search"
+  },
+  {
+    "issue": {
+      "id": "INC-204",
+      "tenant": "demo",
+      "title": "Duplicate notice",
+      "description": "Two synthetic notices were emitted for the same event. The cause is unknown."
+    },
+    "required_term": "notice"
+  },
+  {
+    "issue": {
+      "id": "INC-205",
+      "tenant": "demo",
+      "title": "Missing dashboard tile",
+      "description": "The dashboard tile is absent for an invented tenant. No change has been approved."
+    },
+    "required_term": "dashboard"
+  },
+  {
+    "issue": {
+      "id": "INC-206",
+      "tenant": "demo",
+      "title": "Slow report",
+      "description": "A synthetic report takes longer than the expected five seconds. The cause is unknown."
+    },
+    "required_term": "report"
+  },
+  {
+    "issue": {
+      "id": "INC-207",
+      "tenant": "demo",
+      "title": "Stale page",
+      "description": "A status page shows an older synthetic update. No cache cause is verified."
+    },
+    "required_term": "page"
+  },
+  {
+    "issue": {
+      "id": "INC-208",
+      "tenant": "demo",
+      "title": "Upload retry",
+      "description": "An invented upload was retried twice. The effect on stored records is not yet checked."
+    },
+    "required_term": "upload"
+  },
+  {
+    "issue": {
+      "id": "INC-209",
+      "tenant": "demo",
+      "title": "Access denial",
+      "description": "A synthetic user received a 403 response. The permission cause is not confirmed."
+    },
+    "required_term": "403"
+  },
+  {
+    "issue": {
+      "id": "INC-210",
+      "tenant": "demo",
+      "title": "Webhook gap",
+      "description": "A synthetic webhook event is absent from the receiver log. Delivery state is unknown."
+    },
+    "required_term": "webhook"
+  }
+]

@@ -33,6 +33,8 @@ Python 3.11+ and standard library provide the offline baseline. Standard-library
 
 Run `python -m projects.p06_capstone.evaluate` from the root for a frozen case report. For the local service, set a disposable demo token and follow the [runbook](RUNBOOK.md).
 
+The local service can persist request IDs, result status, tenant and a question hash in SQLite; it stores no raw question or bearer token. Repeated matching IDs return the recorded result, conflicting reuse returns 409. Authenticated `GET /metrics` reports aggregate request counts and median local processing time. The [runbook](RUNBOOK.md) describes the retention purge and local rollback drill. These controls do not provide production identity, durable approval across a real effect, or automated deployment rollback.
+
 ## Testing and evaluation
 
 Unauthorized, oversized, malformed, scoped, health and shutdown paths. Use [project rubric](../../assessments/rubrics/project_rubric.md). Report numerators and denominators for measured metrics. The reference tests check selected invariants; they do not establish model quality or learner competence.
@@ -43,4 +45,4 @@ All fixture content is synthetic. Source text and model output are untrusted. Th
 
 ## Deliverables and extension
 
-Submit code, evaluated cases, threat model, release record, runbook and design defense. **Challenge:** Add real identity, durable approval/task state, traces and rollback before production use.
+Submit code, evaluated cases, threat model, release record, runbook and design defense. **Challenge:** Add verified identity and tenant authorization, durable approval for a real effect, operational traces, and automated release rollback before production use.

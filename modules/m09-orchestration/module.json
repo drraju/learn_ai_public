@@ -3,7 +3,7 @@
   "title": "Orchestration and multi-agent design",
   "status": "draft",
   "prerequisites": [
-    "M08"
+    "M07"
   ],
   "estimated_hours": 14,
   "offline_path": true,

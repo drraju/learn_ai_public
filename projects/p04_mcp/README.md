@@ -31,6 +31,8 @@ Python 3.11+ and standard library provide the offline baseline. Uses optional MC
 4. Change one behavior, add a negative test, and rerun the suite.
 5. Record the fixture, code and provider versions used in a comparison report.
 
+With the optional MCP SDK installed, run `python -m unittest tests.test_mcp -v`. The host now checks the negotiated protocol version against an explicit accepted set before discovery; the test rejects a mismatched version. The current transport is in-process; remote transport and authentication remain unverified.
+
 ## Testing and evaluation
 
 Host denial and in-process tool exchange; protocol and SDK versions must be recorded. Use [project rubric](../../assessments/rubrics/project_rubric.md). Report numerators and denominators for measured metrics. The reference tests check selected invariants; they do not establish model quality or learner competence.

@@ -10,8 +10,9 @@ class Approval:
     key: str
 
 class Agent:
-    def __init__(self,store=None,max_steps=3):
+    def __init__(self,store=None,max_steps=3,effect_store=None):
         self.store=store or demo_store();self.max_steps=max_steps;self.effects={}
+        self.effect_store=effect_store
     def investigate(self,tenant,question,proposals):
         if not tenant or not question: raise ValueError('identity and question required')
         trace=[]
@@ -27,11 +28,21 @@ class Agent:
             if not response['abstained']:
                 return {'status':'answered','result':response,'trace':trace}
         return {'status':'no_evidence','trace':trace}
+    def investigate_with(self,tenant,question,proposal_source):
+        # External/model proposals enter the same host policy as fixture proposals.
+        proposals=proposal_source.propose(tenant,question)
+        if not isinstance(proposals,(list,tuple)):
+            raise ValueError('invalid proposal source')
+        return self.investigate(tenant,question,proposals)
+
     def simulate_action(self,tenant,action,target,key,approval):
         if action!='acknowledge_alert' or not target.startswith('A-') or not key:
             raise PermissionError('action denied')
         expected=Approval(tenant,action,target,key)
         if approval!=expected: raise PermissionError('approval mismatch')
+        if self.effect_store is not None:
+            status=self.effect_store.apply(expected)
+            return {'status':status,'target':target}
         prior=self.effects.get(key)
         if prior and prior!=expected: raise PermissionError('idempotency key reused')
         self.effects[key]=expected

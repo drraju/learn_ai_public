@@ -3,7 +3,6 @@
   "title": "Tool calling and bounded agents",
   "status": "draft",
   "prerequisites": [
-    "M02",
     "M05"
   ],
   "estimated_hours": 18,

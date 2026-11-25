@@ -28,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the root run `python -m unittest tests.test_mcp -v`. The denial test runs without the MCP SDK; the exchange test skips when it is absent. Read the host allowlist and server contract in `projects/p04_mcp/app.py`. Record an unavailable SDK as a blocked integration, then continue to M09. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
+From the root run `python -m unittest tests.test_mcp -v`. The denial test runs without the MCP SDK; the exchange and negotiated-version tests skip when it is absent. Read the host allowlist and server contract in `projects/p04_mcp/app.py`. Record an unavailable SDK as a blocked integration, then continue to M09. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

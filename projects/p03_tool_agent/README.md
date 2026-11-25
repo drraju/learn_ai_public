@@ -31,6 +31,8 @@ Python 3.11+ and standard library provide the offline baseline. Deterministic se
 4. Change one behavior, add a negative test, and rerun the suite.
 5. Record the fixture, code and provider versions used in a comparison report.
 
+Run `python -m projects.p03_tool_agent.durable_demo` from the root to see a SQLite-backed approval and effect survive a new Agent instance. It writes only to ignored `generated/p3_effects.db`. `SQLiteActionStore` rejects missing, mismatched or expired approvals and reuses an idempotency key only for the exact same simulated action. The default `Agent()` remains an in-memory baseline.
+
 ## Testing and evaluation
 
 Unknown tool, malformed argument, exhausted budget, cross-tenant approval and replay. Use [project rubric](../../assessments/rubrics/project_rubric.md). Report numerators and denominators for measured metrics. The reference tests check selected invariants; they do not establish model quality or learner competence.
@@ -41,4 +43,4 @@ All fixture content is synthetic. Source text and model output are untrusted. Th
 
 ## Deliverables and extension
 
-Submit trajectory, denial trace, approval demonstration and threat model. **Challenge:** Replace simulated approval with a durable authenticated mechanism in an isolated design.
+Submit trajectory, denial trace, approval demonstration and threat model. **Challenge:** Add authenticated approval identity and a real external effect only in an isolated, authorized environment; the SQLite ledger here records a simulated effect.

@@ -1,0 +1,14 @@
+# Optional live-path verification — 25 November 2026
+
+This record covers synthetic data only. Local runs were on macOS ARM64, Python 3.13.14, 48 GiB memory, Ollama server 0.40.18. The installed model identifiers were `llama3.2:latest` (`a80c4f17acd5`) and `phi4:latest` (`ac896e5b8b34`). These checks used no hosted API and incurred no API charge. They do not establish performance on other machines or models.
+
+| Path | Observed result | Boundary |
+|---|---|---|
+| P1, `llama3.2:latest` | After clarifying the source-ID instruction, one smoke test satisfied the strict P1 output contract. In a ten-case run, automatic ID/term checks passed 10/10. Manual review found one unsupported effect claim: the model said a retried upload had not affected stored records, although the source said that effect was unchecked. | Schema and source-ID checks alone did not catch the unsupported claim. A conservative causal-phrase guard was added afterward; other claims still require review. |
+| P1, `phi4:latest` | A ten-case run satisfied the output contract. The model sometimes proposed an unverified explanation in the uncertainty field. A repeated failure-case check drove the conservative causal-phrase guard. | Prompt revisions and local samples do not prove semantic support on unseen cases. |
+| P2 generated RAG, `phi4:latest` | The four-case set in `assessments/cases/p02_grounded.json` passed 4/4: two supported answers with exact passage IDs and verbatim evidence quotes, plus two abstentions. The two answer claims were manually checked against the cited synthetic passages. | Tiny case set; passage quote validation cannot prove every answer claim. |
+| P2 generated RAG, `llama3.2:latest` | Some runs abstained despite retrieved evidence; other runs produced malformed citation shapes or an answer that missed the requested action. The host rejected malformed citations. | This model/path did not pass the P2 quality gate. |
+| Ollama embeddings with `llama3.2:latest` | `/api/embed` returned HTTP 501. | This installed generation model is not verified for embeddings. No embedding model was downloaded. |
+| OpenAI API | No live request: no API key or selected model was available in the process environment. Mocked request-shape tests remain in CI. | Live compatibility and cost remain unverified. |
+
+The optional RAG adapter uses Ollama's documented [JSON schema format](https://docs.ollama.com/capabilities/structured-outputs), followed by application-side validation of citations and quotes. The selected model can still abstain or make unsupported claims. No live path is part of default CI. To repeat a P1 local trial, set `ALLOW_LIVE_MODEL=1`, `LEARN_AI_PROVIDER=ollama`, and `OLLAMA_MODEL` to an installed model; then run `python -m projects.p01_llm_app.app`. For the P2 trial, call `projects.p02_rag.evaluate.evaluate(OllamaGroundedGenerator())` in a Python process with the same opt-in and model setting. Review all generated claims before using a result.

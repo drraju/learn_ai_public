@@ -20,6 +20,23 @@ Date: 25 November 2026. Scope: the `learn_ai_public` draft. **Stage 5 gate resul
 
 The sandbox initially denied loopback sockets during an ordinary test invocation; the same socket tests passed when run with local loopback permission. The denial was an execution-environment limit, not a code failure. Docker is installed but its daemon was unavailable, so no Linux container run was possible. At the time of this local audit, the GitHub workflow had not run. Hosted CI results must be recorded separately after draft publication.
 
+## Follow-up verification — 25 November 2026
+
+[Hosted run 45645966986](https://github.com/drraju/learn_ai_public/actions/runs/45645966986) completed successfully for commit `7e9ff7d`: Ubuntu, macOS and Windows with Python 3.11 and 3.13, plus the pinned MCP job. This closes the original Windows/Linux execution blocker for that commit. The follow-up code below must pass a new hosted run after push.
+
+On the current follow-up tree, the project suite passed 25 tests on local Python 3.11 and 3.13, with two optional MCP skips in each. The pinned MCP SDK 2.3.0 environment passed three MCP tests, including a negotiated-version rejection. M00 passed 14 tests; the retained P3 seed passed 10; P1, P2, P5 and P6 offline evaluation commands completed. Local Markdown links, workflow YAML and `git diff --check` passed. A new identifier/credential/home-path scan found no matching candidate; no symlink or file over 1 MB was added outside Git. The P6 service/client, authenticated metrics and SQLite ledger command were exercised against loopback.
+
+| Project | New evidence | Remaining limit |
+|---|---|---|
+| P1 | Ten synthetic cases, 10/10 fixture checks; conservative rejection of a newly invented causal phrase; local Llama 3.2 and Phi-4 trials | Manual review found unsupported or speculative generated claims; no general semantic-support guarantee |
+| P2 | Four offline cited-answer/abstention cases; optional generated path validates scoped citation and exact evidence quote; local Phi-4 trial passed 4/4 with the two answer claims manually checked | Small case set; Llama 3.2 failed quality cases; no verified semantic embedding model |
+| P3 | SQLite approval/effect ledger passed restart, expiry, replay and mismatch tests; provider-neutral proposal source uses the same host policy | Simulated effect only; no real approval identity or external write |
+| P4 | In-process MCP exchange and negotiated protocol-version denial passed | Remote transport, authentication and independent server compatibility untested |
+| P5 | Same three frozen cases for baseline and two-role workflow, 3/3 each; actual local median timing and role-step counts recorded | Tiny deterministic sample; no model-call cost comparison |
+| P6 | Request replay/conflict, SQLite ledger, protected metrics and retention purge passed; local service run succeeded | Shared demo token, no real identity or durable approval for real effects, no automated deployment rollback or production monitoring |
+
+Exact runtime/model identifiers and negative outcomes are in [live verification](LIVE_VERIFICATION.md). The adapted-content inventory and missing rights decision are in [rights review](RIGHTS_REVIEW.md).
+
 ## Findings fixed during Stage 5
 
 1. Replaced the public migration document's detailed private course timeline and source-path inventory with a public provenance summary and exclusion policy.
@@ -31,14 +48,14 @@ The sandbox initially denied loopback sockets during an ordinary test invocation
 
 ## Open release blockers
 
-| Priority | Finding | Required evidence before passing this gate |
+| Priority | Finding | Evidence needed before passing the gate |
 |---|---|---|
-| High | Windows and Linux execution is unverified. The configured CI matrix has not run; the local Docker daemon was unavailable. | Successful hosted or local runs on both operating systems, with failures repaired and results recorded. |
-| High | P1–P6 do not yet meet every target in [project progression](PROJECT_PROGRESSION.md). P1 lacks the planned ten-case quality set and semantic support checks; P2 has an extractive lexical baseline rather than evaluated generated RAG; P3 approval is in memory; P4 lacks remote/version-mismatch tests; P5 lacks measured comparative cost/latency; P6 lacks production identity, durable state, metrics, retention and rollback automation. | Implement or explicitly rescope each project gate, then rerun normal, negative and evaluation cases. Do not describe P6 as production-ready. |
-| High | OpenAI and Ollama paths were not run against a selected live model/runtime. Mocked tests prove request/response handling only. | Exact model, SDK/runtime, OS, hardware, cost and observed result recorded in implementation manifests; refusal/timeout/unsupported cases exercised where feasible. |
-| High | Reuse rights for migrated source code and the final licence have not been established. | Stage 6 rights and licence compatibility review of the published draft and final file set before a licence or tagged release. Until resolved, no licence is granted. |
-| Medium | Module pages and independent challenges have not been trialled with learners across platforms. The reference tests do not prove the learning assessments. | Independent walkthroughs of M00–M12 and P1–P6, recording ambiguous steps and fixing them. |
+| High | Reuse rights for the adapted M00 lab, M01 demonstrations and P3 seed, and the final licence, are not confirmed. | Owner confirmation of authorship and any third-party terms; choose a compatible licence or replace uncertain material, then review the final public history. |
+| High | P6 is still a local teaching service, not the production-grade target in [project progression](PROJECT_PROGRESSION.md). Its shared demo token is not user identity; request persistence is not approval for a real effect; release rollback is manual. | Authenticated identity and tenant authorization, durable approval around any real effect, operational monitoring, retention policy and a tested deployment/rollback procedure in a selected environment. |
+| High | Generated quality is not yet reliable across chosen models and cases. P1 had unsupported/speculative claims; P2 Llama 3.2 failed supported-answer cases. | Larger held-out quality/attack sets, human support review, selected-model thresholds and repeated live runs; preserve model-specific failure labels. |
+| Medium | Optional provider/integration breadth remains incomplete: OpenAI has no live check, Ollama embedding lacked a supported installed model, and P4 remote MCP is untested. | Check each chosen optional path with exact model/runtime/SDK and failure cases, or explicitly leave it unsupported. No optional provider should block the offline learning route. |
+| Medium | P5 model-provider cost/latency comparison and independent learner trials of M00–M12/P1–P6 are absent. | Case-matched live model trials with cost/latency records where relevant, plus independent learner walkthroughs and fixes across platforms. |
 
 ## Decision
 
-Stage 5 produced a reproducible QA baseline and corrected the findings above. **Release readiness is blocked by the open items.** The owner authorized an explicitly unfinished public draft despite this result. Do not describe it as production-ready, open-source licensed or a completed course. After the high-priority items are resolved, rerun the full Stage 5 gate and update this report before a tagged release review.
+Stage 5 and the follow-up produced reproducible offline evidence and corrected several blockers. **Release readiness is still blocked by the open items.** The owner authorized an explicitly unfinished public draft despite this result. Do not describe it as production-ready, open-source licensed or a completed course. After the high-priority items are resolved, rerun the full Stage 5 gate and update this report before a tagged release review.

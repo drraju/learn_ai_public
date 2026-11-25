@@ -7,3 +7,9 @@ class Tests(unittest.IsolatedAsyncioTestCase):
  async def test_in_process_exchange(self):
   result=await lookup('RB-LOGIN')
   self.assertEqual(result['id'],'RB-LOGIN')
+
+class VersionTests(unittest.IsolatedAsyncioTestCase):
+ @unittest.skipUnless(importlib.util.find_spec('mcp'),'optional mcp SDK not installed')
+ async def test_mismatched_protocol_version_is_denied(self):
+  with self.assertRaisesRegex(RuntimeError,'protocol version denied'):
+   await lookup('RB-LOGIN',accepted_versions=('1900-01-01',))

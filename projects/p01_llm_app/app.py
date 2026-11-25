@@ -18,6 +18,13 @@ def summarize(raw, generator=None):
         raise ValueError('invalid uncertainty')
     if sources!=[issue.id]:
         raise ValueError('unsupported source')
+    # Conservative guard for this small teaching task: a new causal phrase needs
+    # explicit support in the source. Other unsupported claims still need review.
+    source_text=(issue.title+' '+issue.description).lower()
+    generated_text=(summary+' '+uncertainty).lower()
+    for phrase in ('due to', 'because', 'caused by', 'resulted from'):
+        if phrase in generated_text and phrase not in source_text:
+            raise ValueError('unsupported causal explanation')
     return result
 
 def configured_generator():

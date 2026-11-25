@@ -18,6 +18,9 @@ jobs:
       - run: python -m unittest discover -s modules/m00-software/labs/reference -p "test_*.py" -v
       - run: python -m unittest discover -s tests -p "test_*.py" -v
         working-directory: projects/p03_tool_agent/seed
+      - run: python -m projects.p01_llm_app.evaluate
+      - run: python -m projects.p02_rag.evaluate
+      - run: python -m projects.p05_multi_agent.evaluate
       - run: python -m projects.p06_capstone.evaluate
       - run: python tools/check_repo.py
   mcp:

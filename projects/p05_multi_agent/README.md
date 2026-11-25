@@ -31,6 +31,8 @@ Python 3.11+ and standard library provide the offline baseline. Plain Python wor
 4. Change one behavior, add a negative test, and rerun the suite.
 5. Record the fixture, code and provider versions used in a comparison report.
 
+Run `python -m projects.p05_multi_agent.evaluate` from the root for a case-matched, repeated offline comparison. It reports case passes, role steps and median local wall time. Both paths have zero API spend; the tiny synthetic set and machine-specific timing do not establish model-provider cost or broad superiority.
+
 ## Testing and evaluation
 
 Verified, disputed and abstained cases; compare steps and latency. Use [project rubric](../../assessments/rubrics/project_rubric.md). Report numerators and denominators for measured metrics. The reference tests check selected invariants; they do not establish model quality or learner competence.

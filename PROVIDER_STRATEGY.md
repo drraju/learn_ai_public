@@ -1,4 +1,4 @@
-# Provider and environment strategy — Stage 2 proposal
+# Provider and environment strategy
 
 The course teaches application contracts first. A provider implementation is a replaceable example, not the definition of a concept. Provider support is capability-specific and must be verified against an exact model, runtime, SDK and date before a lesson claims it works.
 
@@ -37,3 +37,5 @@ Each provider lesson records: official documentation URL, exact SDK/runtime/mode
 ## Interoperability boundary
 
 MCP is taught as a client/server protocol for tools and resources, using a [dated specification](https://modelcontextprotocol.io/specification/2026-07-28). A2A is an advanced option for independent agent communication using its [published specification](https://a2a-protocol.org/latest/specification/). Neither protocol is a substitute for authorization, trust-boundary review or task evaluation. New protocol features enter lessons only after a versioned local demonstration and a maintenance owner are available.
+
+The first local model results and failure cases are in [LIVE_VERIFICATION.md](LIVE_VERIFICATION.md). Optional providers remain capability-specific: a passed generation case does not imply embedding support.

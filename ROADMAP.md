@@ -1,13 +1,13 @@
 # Roadmap
 
-Status: Stage 5 QA completed with an open readiness gate, 25 November 2026. Current evidence and blockers are in the [QA report](QA_REPORT.md).
+Status: follow-up implementation and QA in progress, 25 November 2026. Current evidence and blockers are in the [QA report](QA_REPORT.md).
 
 ## Stage 4 closeout
 
 - Independently review M00–M12 teaching flows, expand scaffolds and model comparison cases.
-- Verify optional OpenAI, Ollama and MCP paths in isolated environments with exact model, runtime and SDK versions; retain unverified labels until then.
-- Strengthen the capstone with authenticated identity, durable state/approval, metrics, rollback and retention exercises. Its current loopback service is a teaching reference.
-- Add provider-independent tool proposal adapters and semantic retrieval comparison after the deterministic baselines are measured.
+- Continue optional live-path verification. Local Ollama generation and in-process MCP have limited evidence; OpenAI, a dedicated embedding model and remote MCP remain unverified. See [live verification](LIVE_VERIFICATION.md).
+- Extend the capstone beyond its local request ledger, metrics and retention drill with real identity, durable approval for real effects, and automated deployment rollback. It remains a teaching reference.
+- Evaluate a real semantic embedding model against the measured lexical baseline. P3 now has a provider-neutral proposal boundary; keep all proposed tools behind host policy.
 
 ## Stage 5 quality assurance
 

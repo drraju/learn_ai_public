@@ -31,6 +31,8 @@ Python 3.11+ and standard library provide the offline baseline. Lexical baseline
 4. Change one behavior, add a negative test, and rerun the suite.
 5. Record the fixture, code and provider versions used in a comparison report.
 
+Run `python -m projects.p02_rag.evaluate` from the root for four frozen cited-answer and abstention cases. An optional generated path is available through `answer_with_generator` and `OllamaGroundedGenerator` with explicit `ALLOW_LIVE_MODEL=1` and an installed `OLLAMA_MODEL`; it accepts only retrieved tenant-scoped passage IDs and a verbatim quote from the cited passage. The [local model verification](../../LIVE_VERIFICATION.md) records a small Phi-4 trial and Llama 3.2 failures.
+
 ## Testing and evaluation
 
 Tenant isolation, stale version, deletion, abstention and Recall@2 denominator. Use [project rubric](../../assessments/rubrics/project_rubric.md). Report numerators and denominators for measured metrics. The reference tests check selected invariants; they do not establish model quality or learner competence.
@@ -39,7 +41,7 @@ Tenant isolation, stale version, deletion, abstention and Recall@2 denominator. 
 
 All fixture content is synthetic. Source text and model output are untrusted. The host application owns identity, tenant scope, tool permissions, limits and effect approval. The local demonstration is not an internet-facing deployment. For P6, see its [threat model](../p06_capstone/THREAT_MODEL.md) and [runbook](../p06_capstone/RUNBOOK.md).
 
-The current answer path is extractive and the vector path is a comparison exercise; generated answer synthesis is not implemented.
+The offline default remains extractive. Generated answer synthesis is optional and model-specific; citation and quote validation do not establish full semantic support. The toy vector path is only a comparison exercise.
 
 ## Deliverables and extension
 

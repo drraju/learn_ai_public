@@ -3,8 +3,7 @@
   "title": "Data ingestion and provenance",
   "status": "draft",
   "prerequisites": [
-    "M00",
-    "M02"
+    "M03"
   ],
   "estimated_hours": 12,
   "offline_path": true,

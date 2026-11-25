@@ -3,7 +3,6 @@
   "title": "MCP and external integration",
   "status": "draft",
   "prerequisites": [
-    "M06",
     "M07"
   ],
   "estimated_hours": 12,

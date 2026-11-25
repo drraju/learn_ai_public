@@ -28,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the root run `python -m projects.p06_capstone.evaluate`. Read its case-level results, then revisit P2 retrieval and P3 policy tests. Separate task-quality measures from invariant failures. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
+From the root run `python -m projects.p01_llm_app.evaluate`, `python -m projects.p02_rag.evaluate`, `python -m projects.p05_multi_agent.evaluate`, and `python -m projects.p06_capstone.evaluate`. Read its case-level results, then revisit P2 retrieval and P3 policy tests. Separate task-quality measures from invariant failures. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

@@ -3,8 +3,7 @@
   "title": "Retrieval and grounded answers",
   "status": "draft",
   "prerequisites": [
-    "M04",
-    "M01"
+    "M04"
   ],
   "estimated_hours": 18,
   "offline_path": true,

@@ -14,6 +14,11 @@ for n in range(13):
    errors.append(f'{path.name}: invalid metadata')
   for field in ('title','prerequisites','estimated_hours','offline_path','project','last_verified','maintainer'):
    if field not in data:errors.append(f'{path.name}: missing {field}')
+  prerequisites=data.get('prerequisites')
+  if not isinstance(prerequisites,list) or any(
+      not isinstance(prereq,str) or not re.fullmatch(r'M\d\d',prereq)
+      or int(prereq[1:])>=n for prereq in prerequisites):
+   errors.append(f'{path.name}: invalid or forward prerequisite')
  except (ValueError,KeyError) as exc:errors.append(f'{path.name}: {exc}')
 for md in root.rglob('*.md'):
  if '.git' in md.parts:continue

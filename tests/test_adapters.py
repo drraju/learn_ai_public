@@ -2,7 +2,7 @@ import json,os,sys,types,unittest
 from unittest.mock import patch
 from shared.core import issue_from,load
 from implementations.generation.openai.provider import OpenAIGenerator
-from implementations.generation.ollama.provider import OllamaGenerator
+from implementations.generation.ollama.provider import OllamaGenerator,OllamaGroundedGenerator
 from implementations.embeddings.ollama.provider import embed as ollama_embed
 from implementations.embeddings.fixture.provider import embed,cosine
 from projects.p01_llm_app.app import configured_generator,FixtureGenerator
@@ -39,6 +39,19 @@ class AdapterTests(unittest.TestCase):
    result=OllamaGenerator('example-model').generate(issue_from(load('issues.json')[0]))
   self.assertEqual(json.loads(result)['issue_id'],'INC-101')
   self.assertFalse(captured[0]['stream'])
+ def test_ollama_grounded_schema_and_opt_in(self):
+  with patch.dict(os.environ,{},clear=True):
+   with self.assertRaises(RuntimeError):
+    OllamaGroundedGenerator('example-model').generate_answer('login timeout',demo_store().search('demo','login timeout'))
+  captured=[]
+  def fake(req,timeout):
+   captured.append(json.loads(req.data))
+   return FakeResponse({'message':{'content':'{"answer":"inspect gateway health","citations":["RB-LOGIN"],"evidence_quote":"inspect gateway health","abstained":false}'}})
+  with patch.dict(os.environ,{'ALLOW_LIVE_MODEL':'1'}),patch('urllib.request.urlopen',side_effect=fake):
+   result=OllamaGroundedGenerator('example-model').generate_answer('login timeout',demo_store().search('demo','login timeout'))
+  self.assertIn('RB-LOGIN',result)
+  self.assertEqual(captured[0]['format']['properties']['citations']['items']['type'],'string')
+
  def test_ollama_embedding_shape_mocked(self):
   def fake(req,timeout):return FakeResponse({'embeddings':[[1.0,2.0]]})
   with patch.dict(os.environ,{'ALLOW_LIVE_MODEL':'1'}),patch('urllib.request.urlopen',side_effect=fake):

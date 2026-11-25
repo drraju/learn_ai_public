@@ -1,0 +1,6 @@
+[
+  {"tenant":"demo","question":"What should I inspect for a login timeout?","expected_citation":"RB-LOGIN"},
+  {"tenant":"demo","question":"What should I check before acting on alert A-17?","expected_citation":"RB-ALERT"},
+  {"tenant":"demo","question":"no matching procedure","expected_citation":null},
+  {"tenant":"other","question":"login timeout","expected_citation":null}
+]

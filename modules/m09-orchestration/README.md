@@ -28,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the root run `python -m projects.p05_multi_agent.app`. Compare baseline and two-role outputs on the same question, then inspect the disagreement path. No MCP runtime is needed. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
+From the root run `python -m projects.p05_multi_agent.app`. Compare baseline and two-role outputs on the same question, then run `python -m projects.p05_multi_agent.evaluate` and inspect the disagreement path. No MCP runtime is needed. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

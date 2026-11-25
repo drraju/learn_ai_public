@@ -3,7 +3,6 @@
   "title": "Evaluation, security and observability",
   "status": "draft",
   "prerequisites": [
-    "M05",
     "M09"
   ],
   "estimated_hours": 20,

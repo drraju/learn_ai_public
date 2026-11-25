@@ -1,13 +1,13 @@
 {
   "provider": "ollama",
   "capability": "text generation",
-  "status": "mocked_only",
+  "status": "live_checked_limited",
   "sdk_version": null,
-  "model_or_runtime_version": null,
-  "tested_environment": "Python 3.13.14, macOS mocked",
+  "model_or_runtime_version": "Ollama 0.40.18; llama3.2:latest a80c4f17acd5; phi4:latest ac896e5b8b34",
+  "tested_environment": "macOS ARM64, Python 3.13.14, 48 GiB memory; local synthetic P1 and P2 cases",
   "last_verified": "2026-11-25",
   "official_docs": "https://docs.ollama.com/api/chat",
   "cost": "zero offline; external usage varies",
-  "limitations": "No live model compatibility verified",
+  "limitations": "P1 semantic support remains human-reviewed; local model produced an unsupported claim. P2 Phi-4 passed 4 synthetic cases; Llama 3.2 had abstention/citation failures. No broad model compatibility claim.",
   "maintainer": "maintainer pending release"
 }

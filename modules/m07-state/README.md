@@ -28,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the root run the P3 tests with `python -m unittest discover -s tests -p "test_*.py" -v`. Trace the approval fields and replay key in `projects/p03_tool_agent/app.py`. The reference approval is in memory; durable state remains an extension. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
+From the root run the P3 tests with `python -m unittest discover -s tests -p "test_*.py" -v`. Trace the approval fields and replay key in `projects/p03_tool_agent/app.py`. The default reference approval is in memory; run `python -m projects.p03_tool_agent.durable_demo` for the optional SQLite-backed simulated approval and effect. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

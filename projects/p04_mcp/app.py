@@ -20,13 +20,19 @@ def build_server():
         raise ValueError('not found')
     return server
 
-async def lookup(doc_id,allowed_tools=('lookup_runbook',)):
+async def lookup(doc_id,allowed_tools=('lookup_runbook',),accepted_versions=('2026-07-28',)):
     if 'lookup_runbook' not in allowed_tools: raise PermissionError('host denied tool')
     if not isinstance(doc_id,str) or not doc_id.startswith('RB-') or len(doc_id)>80:
         raise ValueError('invalid ID')
     from mcp import Client
+    denied_version=None
     async with Client(build_server(),raise_exceptions=True) as client:
-        tools=await client.list_tools()
-        if 'lookup_runbook' not in [x.name for x in tools.tools]: raise RuntimeError('capability unavailable')
-        result=await client.call_tool('lookup_runbook',{'doc_id':doc_id})
-        return result.structured_content
+        if client.protocol_version not in accepted_versions:
+            denied_version=client.protocol_version
+        else:
+            tools=await client.list_tools()
+            if 'lookup_runbook' not in [x.name for x in tools.tools]:
+                raise RuntimeError('capability unavailable')
+            result=await client.call_tool('lookup_runbook',{'doc_id':doc_id})
+            return result.structured_content
+    raise RuntimeError('protocol version denied: '+denied_version)
