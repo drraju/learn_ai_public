@@ -1,6 +1,10 @@
 # M06 — Tool calling and bounded agents
 
-Status: draft teaching module. Estimated time: 18 hours. Prerequisites: M02, M05. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+Status: draft teaching module. Estimated time: 18 hours. Prerequisites: M05. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+
+## Study checkpoint
+
+Prerequisite: M05. Practice: P3 read-only proposal validation and stopping. Continue when you can show an unknown-tool denial and bounded trajectory; then M07. Previous: [M05](../m05-retrieval/README.md); next: [M07](../m07-state/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
 
 ## Problem and objectives
 
@@ -24,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p03_tool_agent/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+From the root run `python -m projects.p03_tool_agent.app`. Trace proposal → policy → tool → observation, then inspect tests for unknown tools and exhausted budgets. Approval comes in M07. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

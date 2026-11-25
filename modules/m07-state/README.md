@@ -2,6 +2,10 @@
 
 Status: draft teaching module. Estimated time: 14 hours. Prerequisites: M06. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
 
+## Study checkpoint
+
+Prerequisite: M06. Practice: P3 exact-action simulated approval and replay. Continue when you can show a mismatched approval denial and idempotent repeat; then M08 or M09. Previous: [M06](../m06-tools/README.md); next: [M08](../m08-mcp/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
+
 ## Problem and objectives
 
 The practical question is how to apply **checkpoints, exact-action approval and idempotency** to the synthetic support workflow. By completion, explain the concept, run the reference, change one behavior, test a failure case, and defend the trade-off.
@@ -24,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p03_tool_agent/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+From the root run the P3 tests with `python -m unittest discover -s tests -p "test_*.py" -v`. Trace the approval fields and replay key in `projects/p03_tool_agent/app.py`. The reference approval is in memory; durable state remains an extension. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

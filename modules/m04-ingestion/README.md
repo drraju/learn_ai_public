@@ -1,6 +1,10 @@
 # M04 — Data ingestion and provenance
 
-Status: draft teaching module. Estimated time: 12 hours. Prerequisites: M00, M02. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+Status: draft teaching module. Estimated time: 12 hours. Prerequisites: M03. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+
+## Study checkpoint
+
+Prerequisite: M03. Practice: P2 source versions, lineage, update and deletion. Continue when you can show an older-version rejection and deletion check; then M05. Previous: [M03](../m03-context/README.md); next: [M05](../m05-retrieval/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
 
 ## Problem and objectives
 
@@ -24,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p02_rag/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+From the root run `python -m projects.p02_rag.app`. Inspect the source register and version checks before looking at search scores. Add a source version, then delete it and confirm it cannot be retrieved. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

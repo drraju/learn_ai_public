@@ -1,6 +1,10 @@
 # M08 — MCP and external integration
 
-Status: draft teaching module. Estimated time: 12 hours. Prerequisites: M06, M07. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+Status: draft teaching module. Estimated time: 12 hours. Prerequisites: M07. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+
+## Study checkpoint
+
+Prerequisite: M07. Practice: P4 host policy and optional SDK exchange. Continue when you can show an explicit host denial; if the SDK is installed, an allowed exchange and version note; then M09. Previous: [M07](../m07-state/README.md); next: [M09](../m09-orchestration/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
 
 ## Problem and objectives
 
@@ -24,11 +28,11 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p04_mcp/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+From the root run `python -m unittest tests.test_mcp -v`. The denial test runs without the MCP SDK; the exchange test skips when it is absent. Read the host allowlist and server contract in `projects/p04_mcp/app.py`. Record an unavailable SDK as a blocked integration, then continue to M09. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 
-Run the optional in-process MCP lookup with a demo-only runbook. Start from the project code, write a failing test first, then make the smallest change that passes it. Record the command, test result and one limitation.
+First run the host-denial test, which needs no SDK. If the MCP SDK is available, run the optional in-process lookup with a demo-only runbook; otherwise record the exchange as blocked and continue. Record the command, test result and one limitation.
 
 ## Independent challenge
 

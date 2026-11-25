@@ -2,6 +2,10 @@
 
 Status: draft teaching module. Estimated time: 10 hours. Prerequisites: M02. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
 
+## Study checkpoint
+
+Prerequisite: M02. Practice: a case-by-case context or task-instruction comparison for P1. Continue when you can design a frozen comparison, run it if a model is available, and state an unsupported-claim limit; then M04. Previous: [M02](../m02-interfaces/README.md); next: [M04](../m04-ingestion/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
+
 ## Problem and objectives
 
 The practical question is how to apply **trusted instructions, untrusted context and frozen comparisons** to the synthetic support workflow. By completion, explain the concept, run the reference, change one behavior, test a failure case, and defend the trade-off.
@@ -24,15 +28,15 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p01_llm_app/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+Run `python -m projects.p01_llm_app.app` from the root and inspect the source and uncertainty fields. Draft two context or task-instruction variants on the same synthetic issue; compare actual outputs only if an optional model runtime is available. The fixture reference does not implement a prompt benchmark. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 
-Compare two summary prompts against the same synthetic issue and record exact failures. Start from the project code, write a failing test first, then make the smallest change that passes it. Record the command, test result and one limitation.
+Draft two task-instruction or context variants against the same synthetic issue and predict what would change. If you elect a model runtime, run both on the same fixed cases and record exact outputs; otherwise record this as an unrun comparison. Record the command, test result and one limitation.
 
 ## Independent challenge
 
-Shorten context without dropping uncertainty or source fields. Explain the invariant before reading the reference solution. Submit a short result with the input, expected result, observed result and a failure case.
+Shorten a synthetic context without dropping uncertainty or source fields; explain what you would test with a model. Explain the invariant before reading the reference solution. Submit a short result with the input, expected result, observed result and a failure case.
 
 ## Project integration and assessment
 

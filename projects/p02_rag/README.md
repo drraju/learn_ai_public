@@ -1,5 +1,9 @@
 # Cited retrieval application
 
+## Place in the study sequence
+
+Enter after M04–M05. Complete the project evidence and independent challenge, then continue to P3 after M06–M07. See the [study sequence](../../STUDY_SEQUENCE.md) and [project progression](../../PROJECT_PROGRESSION.md). The reference implementation is a starting point, not evidence that the full project gate has been met.
+
 ## Problem and requirements
 
 Answer from permitted synthetic runbooks and abstain when evidence is absent. Version, update and delete documents; enforce tenant scope; cite exact passage IDs. This reference is a learning artifact using invented data. Keep requests bounded, dependencies explicit, and secrets out of fixtures and logs.

@@ -4,6 +4,8 @@ The repository is published as an unfinished draft and has no tagged release or 
 
 ## Unreleased — 25 November 2026
 
+- Added a learner study sequence, module-specific demonstrations, and explicit project entry and exit checkpoints; kept MCP runtime work optional before orchestration.
+
 - Published the owner-authorized unfinished draft while keeping Stage 5 and Stage 6 release gates open.
 
 - Completed a Stage 5 local QA audit and recorded release blockers in `QA_REPORT.md`.

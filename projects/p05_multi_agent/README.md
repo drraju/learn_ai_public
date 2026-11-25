@@ -1,5 +1,9 @@
 # Two-role workflow comparison
 
+## Place in the study sequence
+
+Enter after M09 after P3; M08 runtime optional. Complete the project evidence and independent challenge, then continue to P6 after M10–M12. See the [study sequence](../../STUDY_SEQUENCE.md) and [project progression](../../PROJECT_PROGRESSION.md). The reference implementation is a starting point, not evidence that the full project gate has been met.
+
 ## Problem and requirements
 
 Test whether separate evidence and verification roles improve a synthetic support answer. Compare to one-role baseline; verifier disagreement blocks assertion. This reference is a learning artifact using invented data. Keep requests bounded, dependencies explicit, and secrets out of fixtures and logs.

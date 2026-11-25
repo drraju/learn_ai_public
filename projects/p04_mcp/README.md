@@ -1,5 +1,9 @@
 # MCP lookup
 
+## Place in the study sequence
+
+Enter after M08 after P3. Complete the project evidence and independent challenge, then continue to P5 after M09. See the [study sequence](../../STUDY_SEQUENCE.md) and [project progression](../../PROJECT_PROGRESSION.md). The reference implementation is a starting point, not evidence that the full project gate has been met.
+
 ## Problem and requirements
 
 Discover and call a synthetic read-only runbook tool through the optional Python MCP SDK. Host allowlist and argument check precede client use; server exposes only demo data. This reference is a learning artifact using invented data. Keep requests bounded, dependencies explicit, and secrets out of fixtures and logs.

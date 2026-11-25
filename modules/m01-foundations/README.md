@@ -2,6 +2,10 @@
 
 Status: draft teaching module. Estimated time: 10 hours. Prerequisites: M00. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
 
+## Study checkpoint
+
+Prerequisite: M00. Practice: the budget, vector and attention demonstrations. Continue when you can show three analogy limits and the difference between training and inference; then M02. Previous: [M00](../m00-software/README.md); next: [M02](../m02-interfaces/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
+
 ## Problem and objectives
 
 The practical question is how to apply **training versus inference, tokens, context, attention and vector similarity** to the synthetic support workflow. By completion, explain the concept, run the reference, change one behavior, test a failure case, and defend the trade-off.
@@ -24,19 +28,19 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p01_llm_app/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+`cd modules/m01-foundations/labs` and run `python day04_offline_budget.py`, `python day05_vectors.py` and `python day06_attention.py`. Predict each result before running it; name one way each toy analogy differs from a model. P1 begins after M02. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 
-Run the offline budget and vector demonstrations; record where the toy behavior differs from a model. Start from the project code, write a failing test first, then make the smallest change that passes it. Record the command, test result and one limitation.
+Run the offline budget and vector demonstrations; record where the toy behavior differs from a model. Start from the [offline demonstrations](labs/README.md), change one input and predict the new output before running it. Record the command, test result and one limitation.
 
 ## Independent challenge
 
-Show why naive truncation can remove an approval condition. Explain the invariant before reading the reference solution. Submit a short result with the input, expected result, observed result and a failure case.
+Show why naive truncation can remove an important task constraint. Explain the invariant before reading the reference solution. Submit a short result with the input, expected result, observed result and a failure case.
 
 ## Project integration and assessment
 
-Integrate the result into [P01_LLM_APP](../../projects/p01_llm_app/README.md). Completion requires a working change, a normal and a negative test, a measured or counted result with denominator where relevant, and an explanation of one design choice. Use the [assessment framework](../../ASSESSMENT_FRAMEWORK.md). A passing reference suite alone is not learner completion.
+Keep the analogy comparison as foundation evidence before starting [P1](../../projects/p01_llm_app/README.md) in M02. Completion requires a working change, a normal and a negative test, a measured or counted result with denominator where relevant, and an explanation of one design choice. Use the [assessment framework](../../ASSESSMENT_FRAMEWORK.md). A passing reference suite alone is not learner completion.
 
 ## Alternatives and limits
 

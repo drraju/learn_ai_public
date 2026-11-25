@@ -9,10 +9,10 @@ Beginners with Python basics, software developers moving into AI engineering, an
 ## Start here
 
 1. Clone this repository and run commands from its root.
-2. Read [learning paths](LEARNING_PATHS.md), then [curriculum](CURRICULUM.md) and [M00](modules/m00-software/README.md).
-3. Run the offline checks with `python -m unittest discover -s tests -p "test_*.py" -v` and `python tools/check_repo.py`.
-4. Build [P1](projects/p01_llm_app/README.md), then progress through [P2](projects/p02_rag/README.md), [P3](projects/p03_tool_agent/README.md), [P4](projects/p04_mcp/README.md), [P5](projects/p05_multi_agent/README.md) and [P6](projects/p06_capstone/README.md).
-5. Use the [project rubric](assessments/rubrics/project_rubric.md) to evaluate your own work; reference tests do not establish learner completion.
+2. Follow the [study sequence](STUDY_SEQUENCE.md). Start with [M00](modules/m00-software/README.md) and its lab, then M01; start P1 after M02 and finish its checkpoint after M03.
+3. Use [learning paths](LEARNING_PATHS.md) for a diagnostic skip and the [curriculum](CURRICULUM.md) for full module outcomes. A skip does not waive project evidence.
+4. Run `python -m unittest discover -s tests -p "test_*.py" -v` and `python tools/check_repo.py` from the root. These check the reference; follow each module's own exercise and independent challenge for learner work.
+5. Record your results with the [assessment framework](ASSESSMENT_FRAMEWORK.md) and [project rubric](assessments/rubrics/project_rubric.md).
 
 On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. Run `python -m unittest discover -s modules/m00-software/labs/reference -p "test_*.py" -v` for the migrated foundations lab. The HTTP test needs loopback socket permission. From `projects/p03_tool_agent/seed`, run `python -m unittest discover -s tests -p "test_*.py" -v` for the migrated baseline.
 

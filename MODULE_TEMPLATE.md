@@ -1,6 +1,6 @@
-# Module authoring contract — Stage 2 proposal
+# Module authoring contract
 
-Use this contract for every M00–M12 lesson in Stage 4. A module may comprise several lessons, but its landing page must make all fields discoverable.
+Use this contract for every M00–M12 lesson. A module may comprise several lessons, but its landing page must make all fields discoverable.
 
 ## Metadata
 

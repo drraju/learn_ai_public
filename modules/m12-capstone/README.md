@@ -1,6 +1,10 @@
 # M12 — Capstone and portfolio defense
 
-Status: draft teaching module. Estimated time: 30 hours. Prerequisites: M11. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+Status: draft teaching module. Estimated time: 30 hours. Prerequisites: M11 and earlier project evidence. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+
+## Study checkpoint
+
+Prerequisite: M11 and earlier project evidence. Practice: P6 evaluation, threat model, runbook and design defense. Continue when you can show one normal and one failure demonstration, a design explanation and an honest limits list. Previous: [M11](../m11-deployment/README.md). Finish with the P6 portfolio defense and use the [study sequence](../../STUDY_SEQUENCE.md) to check your evidence.
 
 ## Problem and objectives
 
@@ -24,11 +28,11 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p06_capstone/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+Run `python -m projects.p06_capstone.evaluate` and the root test suite, then assemble your own P1–P6 evidence. Use the [P6 threat model](../../projects/p06_capstone/THREAT_MODEL.md) and [runbook](../../projects/p06_capstone/RUNBOOK.md) to defend one design decision and one production gap. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 
-Assemble P1–P6 evidence and run the offline suite. Start from the project code, write a failing test first, then make the smallest change that passes it. Record the command, test result and one limitation.
+Assemble P1–P6 evidence and run the offline suite. Organize your own evidence by requirement, run its checks, and identify missing evidence before claiming completion. Record the command, test result and one limitation.
 
 ## Independent challenge
 

@@ -1,5 +1,9 @@
 # Controlled tool agent
 
+## Place in the study sequence
+
+Enter after M06–M07. Complete the project evidence and independent challenge, then continue to P4 after M08, or P5 after M09 if SDK unavailable. See the [study sequence](../../STUDY_SEQUENCE.md) and [project progression](../../PROJECT_PROGRESSION.md). The reference implementation is a starting point, not evidence that the full project gate has been met.
+
 ## Problem and requirements
 
 Investigate a synthetic issue with bounded read-only search and one simulated effect. Allowlist proposals, validate arguments, stop at max steps, bind approval to exact tenant/action/target/key. This reference is a learning artifact using invented data. Keep requests bounded, dependencies explicit, and secrets out of fixtures and logs.

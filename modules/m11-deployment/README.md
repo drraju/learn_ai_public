@@ -2,6 +2,10 @@
 
 Status: draft teaching module. Estimated time: 20 hours. Prerequisites: M10. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
 
+## Study checkpoint
+
+Prerequisite: M10. Practice: P6 local service, runbook and failure rehearsal. Continue when you can show a reproducible local run, a failure response and a rollback plan; then M12. Previous: [M10](../m10-evaluation/README.md); next: [M12](../m12-capstone/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
+
 ## Problem and objectives
 
 The practical question is how to apply **service contracts, identity boundary, budgets, recovery and retention** to the synthetic support workflow. By completion, explain the concept, run the reference, change one behavior, test a failure case, and defend the trade-off.
@@ -24,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p06_capstone/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+Run `python -m projects.p06_capstone.evaluate` from the root, then follow the [P6 runbook](../../projects/p06_capstone/RUNBOOK.md) in two terminals for the local service. Its demo token is not production identity. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 
@@ -32,7 +36,7 @@ Run the local P6 service, call health and investigate, and inspect error respons
 
 ## Independent challenge
 
-Rehearse duplicate and unavailable-provider behavior; propose a rollback criterion. Explain the invariant before reading the reference solution. Submit a short result with the input, expected result, observed result and a failure case.
+Rehearse a duplicate or malformed request in the local service; design an unavailable-provider recovery and rollback criterion for a future adapter. Explain the invariant before reading the reference solution. Submit a short result with the input, expected result, observed result and a failure case.
 
 ## Project integration and assessment
 

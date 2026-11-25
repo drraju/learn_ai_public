@@ -1,6 +1,10 @@
 # M05 — Retrieval and grounded answers
 
-Status: draft teaching module. Estimated time: 18 hours. Prerequisites: M04, M01. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+Status: draft teaching module. Estimated time: 18 hours. Prerequisites: M04. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+
+## Study checkpoint
+
+Prerequisite: M04. Practice: P2 tenant-scoped retrieval, citations and abstention. Continue when you can show Recall@k with its denominator plus an unsupported or absent-evidence case; then M06. Previous: [M04](../m04-ingestion/README.md); next: [M06](../m06-tools/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
 
 ## Problem and objectives
 
@@ -24,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p02_rag/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+From the root run `python -m projects.p02_rag.app` and inspect `assessments/cases/`. Calculate hits, total and Recall@2 from the labelled cases; distinguish retrieval success from answer support. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

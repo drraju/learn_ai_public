@@ -1,6 +1,6 @@
 # Curriculum
 
-Status: Stage 4 draft, 25 November 2026. This is a self-paced sequence with draft M00–M12 pages and six reference projects. Stage 5 teaching and cross-platform QA remain open.
+Status: public teaching draft, 25 November 2026. This is a self-paced sequence with M00–M12 pages and six reference projects. Independent teaching and cross-platform QA remain open. Follow the [study sequence](STUDY_SEQUENCE.md) for the order of lessons, labs and project checkpoints.
 
 ## Learning contract
 
@@ -12,21 +12,21 @@ The estimated hours below are planning ranges, not deadlines. Python 3.11+, Git,
 
 | ID | Module and estimated time | Prerequisites | Evidence gate | Project |
 |---|---|---|---|---|
-| M00 | Software and reproducible workflow, 12–20 h | None | Explain and test a Python/HTTP/SQLite change | P1 |
-| M01 | AI and LLM foundations, 10–16 h | M00 basics | Compare a deterministic baseline and model behavior | P1 |
-| M02 | Model interfaces and application contracts, 12–18 h | M01 | Validate input/output, timeout, refusal and budget paths | P1 |
-| M03 | Prompt and context engineering, 10–16 h | M02 | Run a frozen comparison and explain failure slices | P1 |
-| M04 | Data ingestion and provenance, 12–18 h | M00, M02 | Rebuild, update and delete a versioned corpus | P2 |
-| M05 | Retrieval and grounded generation, 18–28 h | M04, M01 | Compare retrieval baselines and citation support | P2 |
-| M06 | Tool calling and bounded agents, 18–28 h | M02, M05 | Enforce tool policy and termination outside the model | P3 |
-| M07 | State, memory and human control, 14–22 h | M06 | Resume safely; deny stale or mismatched approval | P3 |
-| M08 | MCP and external integration, 12–20 h | M06, M07 | Complete a versioned, permission-checked exchange | P4 |
-| M09 | Orchestration and multi-agent design, 14–24 h | M06–M08 | Compare complexity and outcomes with a single-agent baseline | P5 |
-| M10 | Evaluation, security and observability, 20–30 h | M05–M09 | Pass a release gate with task, trajectory and attack cases | P1–P6 |
-| M11 | Deployment, reliability and governance, 20–30 h | M10 | Reproduce a release, recover a failure and report operations | P6 |
-| M12 | Capstone and portfolio defense, 30–50 h | M00–M11 | Demonstrate, test and defend the complete system | P6 |
+| M00 | Software and reproducible workflow, 12–20 h | None | Explain and test a Python/HTTP/SQLite change | Foundation for P1 |
+| M01 | AI and LLM foundations, 10–16 h | M00 basics | Compare deterministic analogies and a saved response; state their limits | Foundation for P1 |
+| M02 | Model interfaces and application contracts, 12–18 h | M01 | Validate input/output, timeout, refusal and budget paths | Start P1 |
+| M03 | Prompt and context engineering, 10–16 h | M02 | Design a frozen comparison; run it when a model is available and explain failure slices | P1 checkpoint |
+| M04 | Data ingestion and provenance, 12–18 h | M03 | Rebuild, update and delete a versioned corpus | Start P2 |
+| M05 | Retrieval and grounded generation, 18–28 h | M04 | Compare retrieval baselines and citation support | P2 checkpoint |
+| M06 | Tool calling and bounded agents, 18–28 h | M05 | Enforce tool policy and termination outside the model | Start P3 |
+| M07 | State, memory and human control, 14–22 h | M06 | Resume safely; deny stale or mismatched approval | P3 checkpoint |
+| M08 | MCP and external integration, 12–20 h | M07 | Explain host policy and complete a permission-checked exchange when the optional SDK is available | P4 optional integration |
+| M09 | Orchestration and multi-agent design, 14–24 h | M07; M08 optional | Compare complexity and outcomes with a single-agent baseline | P5 checkpoint |
+| M10 | Evaluation, security and observability, 20–30 h | M09 | Evaluate P1–P5 with task, trajectory and attack cases | Start P6 evaluation |
+| M11 | Deployment, reliability and governance, 20–30 h | M10 | Reproduce a local run, rehearse recovery and report operations | Build P6 service |
+| M12 | Capstone and portfolio defense, 30–50 h | M11; earlier project evidence | Demonstrate, test and defend the complete system | P6 checkpoint |
 
-M10 is taught formally after learners have a system to evaluate, but its methods are introduced in M00 and practiced at every project gate. AI-assisted software engineering is a continuing practice: use an assistant to inspect a repository, propose a bounded change, review its diff, and verify it independently. No particular coding assistant is required.
+M10 is taught formally after learners have a system to evaluate, but its methods are introduced in M00 and practiced at every project gate. M08 is a conceptual lesson with an optional SDK integration; learners can continue to M09 after recording an unavailable runtime as a limitation. AI-assisted software engineering is a continuing practice: use an assistant to inspect a repository, propose a bounded change, review its diff, and verify it independently. No particular coding assistant is required.
 
 ## Module specifications
 

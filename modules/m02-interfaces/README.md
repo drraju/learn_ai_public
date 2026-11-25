@@ -2,6 +2,10 @@
 
 Status: draft teaching module. Estimated time: 12 hours. Prerequisites: M01. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
 
+## Study checkpoint
+
+Prerequisite: M01. Practice: P1 fixture provider and input/output contract. Continue when you can show a malformed response denial and a bounded failure path; then M03. Previous: [M01](../m01-foundations/README.md); next: [M03](../m03-context/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
+
 ## Problem and objectives
 
 The practical question is how to apply **validated request and response, refusal, timeout and cost limits** to the synthetic support workflow. By completion, explain the concept, run the reference, change one behavior, test a failure case, and defend the trade-off.
@@ -24,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p01_llm_app/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+From the repository root run `python -m projects.p01_llm_app.app`, then `python -m unittest discover -s tests -p "test_*.py" -v`. Trace the fixture generator and output validator in P1 before considering an optional provider. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

@@ -1,6 +1,10 @@
 # M09 — Orchestration and multi-agent design
 
-Status: draft teaching module. Estimated time: 14 hours. Prerequisites: M08. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+Status: draft teaching module. Estimated time: 14 hours. Prerequisites: M07; M08 integration optional. Required: Python 3.11+, Git and an ordinary laptop. Optional: a provider or coding assistant where linked. Offline API cost: zero; live usage varies by provider and model. No GPU is needed for the offline path.
+
+## Study checkpoint
+
+Prerequisite: M07; M08 runtime integration optional. Practice: P5 one-role baseline versus two-role workflow. Continue when you can show a frozen comparison and keep/remove decision; then M10. Previous required module: [M07](../m07-state/README.md). [M08](../m08-mcp/README.md) is an optional integration branch. Next: [M10](../m10-evaluation/README.md). See the [study sequence](../../STUDY_SEQUENCE.md).
 
 ## Problem and objectives
 
@@ -24,7 +28,7 @@ Text equivalent: validated input passes through a stable rule and bounded implem
 
 ## Guided demonstration
 
-From the repository root, run `python -m unittest discover -s tests -p "test_*.py" -v`. On macOS or Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary. See the [project guide](../../projects/p05_multi_agent/README.md) for the relevant command and expected result. The demonstration is deterministic and uses invented fixtures.
+From the root run `python -m projects.p05_multi_agent.app`. Compare baseline and two-role outputs on the same question, then inspect the disagreement path. No MCP runtime is needed. On macOS/Linux, `python3` may replace `python`; on Windows, use `py -3` if necessary.
 
 ## Guided exercise
 

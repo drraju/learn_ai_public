@@ -1,5 +1,9 @@
 # Local investigation service
 
+## Place in the study sequence
+
+Enter after M10–M12 after earlier project evidence. Complete the project evidence and independent challenge, then continue to portfolio defense. See the [study sequence](../../STUDY_SEQUENCE.md) and [project progression](../../PROJECT_PROGRESSION.md). The reference implementation is a starting point, not evidence that the full project gate has been met.
+
 ## Problem and requirements
 
 Expose the controlled investigation as a local service with a documented operating boundary. Loopback HTTP, bounded request, demo bearer token, scoped lookup, health route and deterministic tests. This reference is a learning artifact using invented data. Keep requests bounded, dependencies explicit, and secrets out of fixtures and logs.

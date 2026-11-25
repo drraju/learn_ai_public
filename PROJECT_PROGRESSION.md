@@ -2,7 +2,7 @@
 
 Use one fictional service-support domain and synthetic incidents, guides and actions throughout, or substitute another permitted domain with the same acceptance checks. Each project is a standalone portfolio milestone and a reusable increment toward P6. The six project directories contain draft reference increments. Diagrams include planned extensions beyond the current code; each project README states its actual limits.
 
-The implementation order is P1 → P2 → P3 → P4 → P5 → P6. At each gate, submit the artifacts named in [ASSESSMENT_FRAMEWORK.md](ASSESSMENT_FRAMEWORK.md). A deterministic reference and offline cases are required; live model paths are optional and must be labelled with tested capabilities.
+The learner order is M00–M01 foundations → M02–M03/P1 → M04–M05/P2 → M06–M07/P3 → M08/P4 (optional SDK integration) → M09/P5 → M10–M12/P6. See the [study sequence](STUDY_SEQUENCE.md) for the exact checkpoints. At each gate, submit the artifacts named in [ASSESSMENT_FRAMEWORK.md](ASSESSMENT_FRAMEWORK.md). A deterministic reference and offline cases are required; live model paths are optional and must be labelled with tested capabilities. P4 uses an optional SDK; record an unavailable runtime without blocking M09.
 
 ## P1 — Validated LLM application
 

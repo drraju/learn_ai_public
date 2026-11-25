@@ -1,4 +1,4 @@
-# Assessment framework — Stage 2 proposal
+# Assessment framework
 
 ## Evidence levels
 
@@ -10,7 +10,7 @@
 | Evaluate | Baseline, metric, denominator and error slices | Evaluation report with fixtures |
 | Operate | Deployment, recovery and ownership | Release manifest and runbook |
 
-A learner must satisfy all levels assigned to a module or project. Time spent, a working reference solution, and an AI-generated explanation are not substitutes.
+Follow the checkpoints in [STUDY_SEQUENCE.md](STUDY_SEQUENCE.md). A learner must satisfy all levels assigned to a module or project. Time spent, a working reference solution, and an AI-generated explanation are not substitutes.
 
 ## Common scoring
 

@@ -1,5 +1,9 @@
 # Validated issue summary
 
+## Place in the study sequence
+
+Enter after M02–M03. Complete the project evidence and independent challenge, then continue to P2 after M04–M05. See the [study sequence](../../STUDY_SEQUENCE.md) and [project progression](../../PROJECT_PROGRESSION.md). The reference implementation is a starting point, not evidence that the full project gate has been met.
+
 ## Problem and requirements
 
 Summarize an invented incident without inventing a cause. Validate issue fields and output identity, source, length and uncertainty. This reference is a learning artifact using invented data. Keep requests bounded, dependencies explicit, and secrets out of fixtures and logs.

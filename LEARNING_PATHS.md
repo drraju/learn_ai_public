@@ -1,13 +1,13 @@
-# Learning paths — Stage 2 proposal
+# Learning paths
 
-All paths use the same module gates in [CURRICULUM.md](CURRICULUM.md). Hours are estimates; the learner progresses by evidence. Required software begins with Python 3.11+ and Git. A terminal and ordinary laptop are sufficient for offline work. A GPU, paid subscription, API key, container runtime and cloud account are optional.
+All paths use the same checkpoints in [STUDY_SEQUENCE.md](STUDY_SEQUENCE.md) and module gates in [CURRICULUM.md](CURRICULUM.md). Hours are estimates; the learner progresses by evidence. Required software begins with Python 3.11+ and Git. A terminal and ordinary laptop are sufficient for offline work. A GPU, paid subscription, API key, container runtime and cloud account are optional.
 
 | Path | Start | Core sequence | Portfolio target |
 |---|---|---|---|
-| Beginner | No professional AI experience | M00 → M01 → M02 → M03 → M04 → M05 → M06, then M07–M12 | P1–P3 first, then P4–P6 |
-| Software developer | Can pass M00 diagnostic | M01–M12; revisit M00 gaps | P1–P6 |
-| AI engineer | Can pass M00–M05 diagnostics | M06–M12; re-evaluate P1/P2 on frozen cases | P3–P6 plus comparative evaluation |
-| Architect or technical lead | Demonstrates technical gates with working code | M02, M05–M12, including security and operations | P6 architecture, risk, and operation defense |
+| Beginner | No professional AI experience | M00 → M01 → M02 → M03/P1 → M04 → M05/P2 → M06 → M07/P3 → M08/P4 (optional runtime) → M09/P5 → M10 → M11 → M12/P6 | P1 after M03; P2 after M05; P3 after M07; P4 optional integration after M08; P5 after M09; P6 after M12 |
+| Software developer | Can pass M00 diagnostic | M01–M12 with project checkpoints; revisit M00 gaps | P1–P6 |
+| AI engineer | Can pass M00–M05 diagnostics | M06–M12; re-evaluate P1/P2 on frozen cases; M08 runtime optional | P3–P6 plus comparative evaluation |
+| Architect or technical lead | Demonstrates technical gates with working code | M02, M05–M12, including security and operations; M08 runtime optional | P6 architecture, risk, and operation defense |
 | Local-first | Any entry level | Same core sequence; offline fixtures then compatible local model | Reproducible local implementation and hardware report |
 
 ## Entry diagnostics
