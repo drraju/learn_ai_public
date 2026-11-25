@@ -20,9 +20,9 @@ Date: 25 November 2026. Scope: the `learn_ai_public` draft. **Stage 5 gate resul
 
 The sandbox initially denied loopback sockets during an ordinary test invocation; the same socket tests passed when run with local loopback permission. The denial was an execution-environment limit, not a code failure. Docker is installed but its daemon was unavailable, so no Linux container run was possible. At the time of this local audit, the GitHub workflow had not run. Hosted CI results must be recorded separately after draft publication.
 
-## Follow-up verification — 25 November 2026
+## Follow-up verification — 26 November 2026
 
-[Hosted run 45645966986](https://github.com/drraju/learn_ai_public/actions/runs/45645966986) completed successfully for commit `7e9ff7d`: Ubuntu, macOS and Windows with Python 3.11 and 3.13, plus the pinned MCP job. This closes the original Windows/Linux execution blocker for that commit. The follow-up code below must pass a new hosted run after push.
+[Hosted run 45645966986](https://github.com/drraju/learn_ai_public/actions/runs/45645966986) completed successfully for commit `7e9ff7d`: Ubuntu, macOS and Windows with Python 3.11 and 3.13, plus the pinned MCP job. This closed the original Windows/Linux execution blocker for that commit. [Hosted run 45662331048](https://github.com/drraju/learn_ai_public/actions/runs/45662331048) then completed successfully for follow-up commit `dd12af6`: all six Ubuntu/macOS/Windows Python 3.11/3.13 jobs and the pinned MCP job passed.
 
 On the current follow-up tree, the project suite passed 25 tests on local Python 3.11 and 3.13, with two optional MCP skips in each. The pinned MCP SDK 2.3.0 environment passed three MCP tests, including a negotiated-version rejection. M00 passed 14 tests; the retained P3 seed passed 10; P1, P2, P5 and P6 offline evaluation commands completed. Local Markdown links, workflow YAML and `git diff --check` passed. A new identifier/credential/home-path scan found no matching candidate; no symlink or file over 1 MB was added outside Git. The P6 service/client, authenticated metrics and SQLite ledger command were exercised against loopback.
 

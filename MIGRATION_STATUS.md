@@ -1,13 +1,13 @@
 # Migration status
 
-Reviewed 25 November 2026. This is a public, unfinished draft at [drraju/learn_ai_public](https://github.com/drraju/learn_ai_public), not a tagged release or readiness claim.
+Reviewed 26 November 2026. This is a public, unfinished draft at [drraju/learn_ai_public](https://github.com/drraju/learn_ai_public), not a tagged release or readiness claim.
 
 | Stage | Status | Evidence and next gate |
 |---|---|---|
 | 1. Discovery and audit | Complete for planning | Source inventory and privacy risks reviewed |
 | 2. Curriculum redesign | Accepted for implementation | [Curriculum](CURRICULUM.md), [learning paths](LEARNING_PATHS.md), [project progression](PROJECT_PROGRESSION.md) |
 | 3. Public architecture | Accepted for implementation | [Architecture](ARCHITECTURE.md), [contribution guide](CONTRIBUTING.md), [decisions](DECISIONS.md) |
-| 4. Creation and migration | Implementation draft | M00–M12 teaching pages and concept guides, six reference projects, fixture and optional provider paths, issue templates and offline CI exist. Current local verification: 25 project/adapter tests on Python 3.11/3.13 (two optional MCP skips), three pinned-SDK MCP tests, 14 M00 lab tests, 10 migrated seed tests, metadata/links and offline project evaluations. Hosted Ubuntu/macOS/Windows CI passed on the prior draft; the new follow-up commit awaits hosted CI. Independent teaching and broad live-provider verification remain open. |
+| 4. Creation and migration | Implementation draft | M00–M12 teaching pages and concept guides, six reference projects, fixture and optional provider paths, issue templates and offline CI exist. Current local verification: 25 project/adapter tests on Python 3.11/3.13 (two optional MCP skips), three pinned-SDK MCP tests, 14 M00 lab tests, 10 migrated seed tests, metadata/links and offline project evaluations. Hosted Ubuntu/macOS/Windows CI passed on follow-up commit `dd12af6` with Python 3.11/3.13 and a pinned MCP job. Independent teaching and broad live-provider verification remain open. |
 | 5. Quality assurance | Audited; gate not passed | [QA report](QA_REPORT.md) records hosted cross-platform passes, new project checks, and remaining production, model-quality, teaching and rights gaps |
 | 6. Release readiness | Pending | Rights and licence decision, final release review and explicit approval for a tagged release |
 

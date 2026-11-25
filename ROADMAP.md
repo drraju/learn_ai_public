@@ -1,6 +1,6 @@
 # Roadmap
 
-Status: follow-up implementation and QA in progress, 25 November 2026. Current evidence and blockers are in the [QA report](QA_REPORT.md).
+Status: follow-up implementation and hosted QA completed, 26 November 2026; release gate remains open. Current evidence and blockers are in the [QA report](QA_REPORT.md).
 
 ## Stage 4 closeout
 
