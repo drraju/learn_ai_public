@@ -1,8 +1,10 @@
 # Changelog
 
-The repository is local and unreleased. Version numbers below are draft markers, not public releases.
+The repository is published as an unfinished draft and has no tagged release or licence. Version numbers below are draft markers.
 
 ## Unreleased — 25 November 2026
+
+- Published the owner-authorized unfinished draft while keeping Stage 5 and Stage 6 release gates open.
 
 - Completed a Stage 5 local QA audit and recorded release blockers in `QA_REPORT.md`.
 - Removed private timeline details from public provenance, rebranded a sample file and bound the capstone demo token to a fixed tenant.

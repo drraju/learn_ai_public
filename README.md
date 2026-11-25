@@ -1,6 +1,6 @@
 # Learn AI Public
 
-An independent local draft of a vendor-neutral, project-driven Agentic AI learning platform. It progresses through **understand → experiment → build → test → evaluate → deploy → operate**. The public release gate has not been passed; this repository has no configured remote.
+An independent public draft of a vendor-neutral, project-driven Agentic AI learning platform. It progresses through **understand → experiment → build → test → evaluate → deploy → operate**. The Stage 5 readiness gate has not passed; this is an unfinished draft, with no tagged release or licence yet.
 
 ## Who this is for
 
@@ -8,7 +8,7 @@ Beginners with Python basics, software developers moving into AI engineering, an
 
 ## Start here
 
-1. Clone the repository after publication, or open this local checkout. Run commands from the repository root.
+1. Clone this repository and run commands from its root.
 2. Read [learning paths](LEARNING_PATHS.md), then [curriculum](CURRICULUM.md) and [M00](modules/m00-software/README.md).
 3. Run the offline checks with `python -m unittest discover -s tests -p "test_*.py" -v` and `python tools/check_repo.py`.
 4. Build [P1](projects/p01_llm_app/README.md), then progress through [P2](projects/p02_rag/README.md), [P3](projects/p03_tool_agent/README.md), [P4](projects/p04_mcp/README.md), [P5](projects/p05_multi_agent/README.md) and [P6](projects/p06_capstone/README.md).
@@ -22,4 +22,4 @@ The default generation and retrieval paths use synthetic fixtures. [Generation a
 
 ## Structure and progress
 
-[Architecture](ARCHITECTURE.md) explains module, project, provider and trust boundaries. [Technology register](TECHNOLOGY_REGISTER.md) records verified versus unverified claims. [Migration status](MIGRATION_STATUS.md) and the [Stage 5 QA report](QA_REPORT.md) list what runs, what was checked and what still blocks release. [Contribution guide](CONTRIBUTING.md), [roadmap](ROADMAP.md), [maintenance policy](MAINTENANCE.md) and [changelog](CHANGELOG.md) support future community work. The project remains unpublished pending Stage 5 and Stage 6 gates.
+[Architecture](ARCHITECTURE.md) explains module, project, provider and trust boundaries. [Technology register](TECHNOLOGY_REGISTER.md) records verified versus unverified claims. [Migration status](MIGRATION_STATUS.md) and the [Stage 5 QA report](QA_REPORT.md) list what runs, what was checked and what still blocks release. [Contribution guide](CONTRIBUTING.md), [roadmap](ROADMAP.md), [maintenance policy](MAINTENANCE.md) and [changelog](CHANGELOG.md) support future community work. The owner authorized publication of this unfinished draft while the Stage 5 and Stage 6 gates remain open. See the QA report before using or contributing to the material.

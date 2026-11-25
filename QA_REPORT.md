@@ -1,12 +1,12 @@
 # Stage 5 quality assurance report
 
-Date: 25 November 2026. Scope: the local `learn_ai_public` working tree intended for eventual publication. **Gate result: not passed.** This report records checks and fixes; it does not authorize a release or a push.
+Date: 25 November 2026. Scope: the `learn_ai_public` draft. **Stage 5 gate result: not passed.** This report records checks and fixes. The owner subsequently authorized publication of an unfinished public draft; that exception does not change the gate result or authorize a tagged release.
 
 ## Checks completed
 
 | Area | Evidence | Result |
 |---|---|---|
-| Repository separation | Original source checkout stayed clean; the public checkout remains a separate local `main` with no remote, commit or push | Pass |
+| Repository separation | Original source checkout stayed clean; the independent public checkout has separate history and its own `main` and remote | Pass |
 | Privacy and secrets | Scanned 127 candidate files before this report for personal/company identifiers, email addresses, home paths and common credential shapes; manually reviewed matches from a broader keyword search. No candidate hit remained after fixes. No symlinks, files over 1 MB or non-text candidate files. | Pass for scanned patterns; no scan proves absence of every secret |
 | Source and syntax | Parsed 36 Python files; no syntax errors. Screened migrated examples and synthetic fixtures. | Pass for syntax; reuse rights still require final review |
 | Local Markdown links | `python tools/check_repo.py` resolved repository-relative links and validated module metadata. No local anchor links are used. | Pass |
@@ -18,7 +18,7 @@ Date: 25 November 2026. Scope: the local `learn_ai_public` working tree intended
 | Provider claims | OpenAI Responses, Ollama chat/embed and MCP interfaces were compared with official documentation. OpenAI/Ollama request shapes have mocked tests; MCP SDK exchange has an in-process test. | Documentation and mock checks pass; live model compatibility unverified |
 | Original project | Rechecked source checkout status after changes to the public staging tree. | Clean |
 
-The sandbox initially denied loopback sockets during an ordinary test invocation; the same socket tests passed when run with local loopback permission. The denial was an execution-environment limit, not a code failure. Docker is installed but its daemon was unavailable, so no Linux container run was possible. The GitHub workflow has not run because the repository remains local and unpublished.
+The sandbox initially denied loopback sockets during an ordinary test invocation; the same socket tests passed when run with local loopback permission. The denial was an execution-environment limit, not a code failure. Docker is installed but its daemon was unavailable, so no Linux container run was possible. At the time of this local audit, the GitHub workflow had not run. Hosted CI results must be recorded separately after draft publication.
 
 ## Findings fixed during Stage 5
 
@@ -36,9 +36,9 @@ The sandbox initially denied loopback sockets during an ordinary test invocation
 | High | Windows and Linux execution is unverified. The configured CI matrix has not run; the local Docker daemon was unavailable. | Successful hosted or local runs on both operating systems, with failures repaired and results recorded. |
 | High | P1–P6 do not yet meet every target in [project progression](PROJECT_PROGRESSION.md). P1 lacks the planned ten-case quality set and semantic support checks; P2 has an extractive lexical baseline rather than evaluated generated RAG; P3 approval is in memory; P4 lacks remote/version-mismatch tests; P5 lacks measured comparative cost/latency; P6 lacks production identity, durable state, metrics, retention and rollback automation. | Implement or explicitly rescope each project gate, then rerun normal, negative and evaluation cases. Do not describe P6 as production-ready. |
 | High | OpenAI and Ollama paths were not run against a selected live model/runtime. Mocked tests prove request/response handling only. | Exact model, SDK/runtime, OS, hardware, cost and observed result recorded in implementation manifests; refusal/timeout/unsupported cases exercised where feasible. |
-| High | Reuse rights for migrated source code and the final licence have not been established. | Stage 6 rights and licence compatibility review of the final file set before public release. |
+| High | Reuse rights for migrated source code and the final licence have not been established. | Stage 6 rights and licence compatibility review of the published draft and final file set before a licence or tagged release. Until resolved, no licence is granted. |
 | Medium | Module pages and independent challenges have not been trialled with learners across platforms. The reference tests do not prove the learning assessments. | Independent walkthroughs of M00–M12 and P1–P6, recording ambiguous steps and fixing them. |
 
 ## Decision
 
-Stage 5 produced a reproducible QA baseline and corrected the findings above. **Publication readiness is blocked by the open items.** Keep the repository local, with no remote or push. After the high-priority items are resolved, rerun the full Stage 5 gate and update this report before Stage 6 publication review.
+Stage 5 produced a reproducible QA baseline and corrected the findings above. **Release readiness is blocked by the open items.** The owner authorized an explicitly unfinished public draft despite this result. Do not describe it as production-ready, open-source licensed or a completed course. After the high-priority items are resolved, rerun the full Stage 5 gate and update this report before a tagged release review.

@@ -1,6 +1,6 @@
 # Contributing
 
-This local draft documents the contribution process for the public release. Outside contributions begin only after the licence and publication gates are complete.
+This public draft documents the proposed contribution process. Outside contributions begin only after the rights and licence gate is complete.
 
 ## Choose a bounded contribution
 
@@ -13,7 +13,7 @@ This local draft documents the contribution process for the public release. Outs
 | Emerging technology trial | `experiments/` | Time-bounded experiment and keep/remove decision |
 | Documentation, accessibility or translation | Affected pages | Clear navigation, accurate commands, diagrams with text equivalents |
 
-Open a focused issue or proposal before changing the module order, shared contract or security policy. Small fixes may proceed directly once the repository is public. A provider contribution should not rewrite the concept lesson merely to match its SDK.
+Open a focused issue or proposal before changing the module order, shared contract or security policy. Small fixes may proceed directly after outside contributions are opened. A provider contribution should not rewrite the concept lesson merely to match its SDK.
 
 ## Contribution format
 
@@ -57,4 +57,4 @@ Review may request a simpler baseline or reject a technology that adds maintenan
 
 Conceptual curriculum revisions use a dated changelog entry and a migration note when prerequisites change. Provider adapters record their own tested versions; a framework upgrade is not silently treated as a curriculum rewrite. Breaking shared-contract changes require an architecture decision, affected-module list, migration path and full offline regression check. [MAINTENANCE.md](MAINTENANCE.md) defines deprecation.
 
-The repository licence is pending a rights and compatibility review. Do not solicit or merge outside contributions before that decision is published. Issue, feature-request and provider templates are present and will be reviewed again at the publication gate.
+The repository licence is pending a rights and compatibility review. Do not solicit or merge outside contributions before that decision is published. Issue, feature-request and provider templates are present and will be reviewed again at the release gate.

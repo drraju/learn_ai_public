@@ -1,6 +1,6 @@
 # Migration status
 
-Reviewed 25 November 2026. This is a local draft, not a publication claim.
+Reviewed 25 November 2026. This is a public, unfinished draft at [drraju/learn_ai_public](https://github.com/drraju/learn_ai_public), not a tagged release or readiness claim.
 
 | Stage | Status | Evidence and next gate |
 |---|---|---|
@@ -9,9 +9,9 @@ Reviewed 25 November 2026. This is a local draft, not a publication claim.
 | 3. Public architecture | Accepted for implementation | [Architecture](ARCHITECTURE.md), [contribution guide](CONTRIBUTING.md), [decisions](DECISIONS.md) |
 | 4. Creation and migration | Implementation draft | M00–M12 teaching pages and concept guides, six reference projects, fixture and optional provider paths, issue templates and offline CI exist. Local verification: 15 project/adapter tests including MCP and HTTP, 14 M00 lab tests, 10 migrated seed tests, metadata/links and project commands passed on macOS. Independent teaching, Windows/Linux CI and live-provider verification remain open. |
 | 5. Quality assurance | Audited; gate not passed | [QA report](QA_REPORT.md) records local passes, fixes and high-priority cross-platform, project-completion, live-provider and rights gaps |
-| 6. Publication readiness | Pending | Licence decision, remote inspection, release review and explicit approval |
+| 6. Release readiness | Pending | Rights and licence decision, final release review and explicit approval for a tagged release |
 
-The new repository is separate from the source, has fresh local `main`, no commit and no remote. It has not been pushed. A prior 404 lookup of the target GitHub URL does not prove availability.
+The independent repository has its own `main` history and GitHub remote. The owner authorized publication as an unfinished public draft despite the failed Stage 5 gate. No licence is granted by this repository yet; external contributions remain closed pending the rights and licence review.
 
 ## Reuse and limitations
 

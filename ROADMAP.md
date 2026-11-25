@@ -15,4 +15,4 @@ Audit all publication files and rights; scan secrets, identifiers and local path
 
 ## Stage 6 publication readiness
 
-Select a compatible licence, inspect Git history and remote state, review release contents and notes, then request explicit publication approval. No push or public release before that gate.
+Review reuse rights and select a compatible licence; review hosted CI, final contents, history and release notes. The owner authorized an unfinished public draft before this gate passed. No tagged release or production-readiness claim until the open blockers are resolved and the gate is passed.
